@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-black: #121314;
+  --color-brand-emerald: #10B981;
+  --color-brand-steel: #4682B4;
+  --color-brand-bgDark: #0E1012;
+  --color-brand-cardDark: #1A1C1E;
+  
+  --font-heading: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+  
+  --shadow-premium: 0 4px 30px rgba(0, 0, 0, 0.03);
+  --shadow-premium-hover: 0 10px 40px rgba(0, 0, 0, 0.06);
+  --shadow-premium-dark: 0 4px 30px rgba(0, 0, 0, 0.4);
+  --shadow-premium-dark-hover: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+@layer base {
+  body {
+    @apply font-body antialiased selection:bg-brand-emerald selection:text-brand-black;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+/* Custom Blueprint / Technical Grid System */
+.blueprint-grid {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(70, 130, 180, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(70, 130, 180, 0.03) 1px, transparent 1px),
+    linear-gradient(to right, rgba(70, 130, 180, 0.015) 10px, transparent 10px),
+    linear-gradient(to bottom, rgba(70, 130, 180, 0.015) 10px, transparent 10px);
+}
+
+.dark .blueprint-grid {
+  background-image: 
+    linear-gradient(to right, rgba(70, 130, 180, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(70, 130, 180, 0.06) 1px, transparent 1px),
+    linear-gradient(to right, rgba(70, 130, 180, 0.02) 10px, transparent 10px),
+    linear-gradient(to bottom, rgba(70, 130, 180, 0.02) 10px, transparent 10px);
+}
+
+/* Engineering Blueprint Dot Matrix Background */
+.dot-matrix {
+  background-size: 20px 20px;
+  background-image: radial-gradient(circle, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+}
+
+.dark .dot-matrix {
+  background-image: radial-gradient(circle, rgba(16, 185, 129, 0.08) 1px, transparent 1px);
+}
+
+/* Custom Notch Clip Path (Notch Design Language) */
+.clip-notch {
+  clip-path: polygon(
+    0px 0px, 
+    calc(100% - 14px) 0px, 
+    100% 14px, 
+    100% 100%, 
+    14px 100%, 
+    0px calc(100% - 14px)
+  );
+}
+
+.clip-notch-sm {
+  clip-path: polygon(
+    0px 0px, 
+    calc(100% - 8px) 0px, 
+    100% 8px, 
+    100% 100%, 
+    8px 100%, 
+    0px calc(100% - 8px)
+  );
+}
+
+/* Corner notches that look like engineering crops */
+.notch-border-container {
+  position: relative;
+}
+
+.notch-corner-tr::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid var(--color-brand-emerald);
+  border-right: 2px solid var(--color-brand-emerald);
+  pointer-events: none;
+}
+
+.notch-corner-bl::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid var(--color-brand-emerald);
+  border-left: 2px solid var(--color-brand-emerald);
+  pointer-events: none;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-white dark:bg-brand-bgDark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-zinc-800 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-brand-emerald;
+}
+
+/* Focus Styling */
+*:focus-visible {
+  @apply outline-none ring-2 ring-brand-emerald ring-offset-2 ring-offset-white dark:ring-offset-brand-bgDark;
+}
