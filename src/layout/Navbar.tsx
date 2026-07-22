@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, PhoneCall } from 'lucide-react';
 import { Logo } from '../components/ui/Logo';
 import { Button } from '../components/ui/Button';
-import { ThemeToggle } from '../components/ui/ThemeToggle';
 import { cn } from '../utils/cn';
 
 interface NavbarProps {
@@ -103,7 +102,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavClick, activeSection }) => 
 
           {/* Right Action Area */}
           <div className="hidden lg:flex items-center gap-4">
-            <ThemeToggle />
             <a href="tel:+919876543210" className="flex items-center gap-2 text-sm font-mono text-neutral-600 dark:text-neutral-400 hover:text-brand-emerald transition-colors duration-200">
               <PhoneCall className="w-4 h-4 text-brand-emerald" />
               <span>+91 98765 43210</span>
@@ -120,7 +118,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavClick, activeSection }) => 
 
           {/* Mobile Menu Actions */}
           <div className="flex items-center gap-3 lg:hidden">
-            <ThemeToggle />
             <button
               type="button"
               onClick={() => setIsOpen(!isOpen)}

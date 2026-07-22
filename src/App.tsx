@@ -14,6 +14,7 @@ import { SupportForm } from './sections/SupportForm';
 import { Contact } from './sections/Contact';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { TermsConditions } from './pages/TermsConditions';
+import { FloatingThemeController } from './components/ui/FloatingThemeController';
 
 type Page = 'home' | 'privacy' | 'terms';
 
@@ -104,6 +105,9 @@ const AppContent: React.FC = () => {
 
       {/* Layout Footer */}
       <Footer onNavClick={handleNavClick} onPageChange={handlePageChange} />
+
+      {/* Floating Theme Controller */}
+      <FloatingThemeController />
     </div>
   );
 };

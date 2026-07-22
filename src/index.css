@@ -24,6 +24,16 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading tracking-tight;
   }
+
+  /* Global theme transitions for backgrounds, colors, and borders (250ms duration) */
+  body, 
+  body *,
+  body *::before,
+  body *::after {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+  }
 }
 
 /* Custom Blueprint / Technical Grid System */
