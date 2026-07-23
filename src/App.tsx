@@ -8,7 +8,6 @@ import { Expertise } from './sections/Expertise';
 import { Process } from './sections/Process';
 import { Industries } from './sections/Industries';
 import { WhyChooseUs } from './sections/WhyChooseUs';
-import { Testimonials } from './sections/Testimonials';
 import { FAQSection } from './sections/FAQSection';
 import { SupportForm } from './sections/SupportForm';
 import { Contact } from './sections/Contact';
@@ -86,7 +85,6 @@ const AppContent: React.FC = () => {
             <Process />
             <Industries />
             <WhyChooseUs />
-            <Testimonials />
             <FAQSection />
             <SupportForm />
             <Contact />
