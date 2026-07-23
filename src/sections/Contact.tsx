@@ -8,9 +8,9 @@ export const Contact: React.FC = () => {
   const contactDetails = [
     {
       title: 'Telephone Hotline',
-      value: '+91 98765 43210',
+      value: '+91 93441 06263',
       actionLabel: 'Call Engineer',
-      href: 'tel:+919876543210',
+      href: 'tel:+919344106263',
       status: 'Direct line to lab',
       icon: Phone,
     },

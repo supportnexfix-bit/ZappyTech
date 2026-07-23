@@ -110,7 +110,7 @@ export const SupportForm: React.FC = () => {
                   {/* Phone */}
                   <Input
                     label="Phone Number"
-                    placeholder="e.g. 9876543210"
+                    placeholder="e.g. 9344106263"
                     type="tel"
                     error={errors.phone?.message}
                     {...register('phone')}

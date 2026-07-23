@@ -77,7 +77,7 @@ export const Hero: React.FC<HeroProps> = ({ onRequestSupport }) => {
               variant="outline"
               size="lg"
               icon={<Phone className="w-4 h-4 text-brand-emerald" />}
-              onClick={() => { window.location.href = 'tel:+919876543210'; }}
+              onClick={() => { window.location.href = 'tel:+919344106263'; }}
             >
               Call Engineers
             </Button>
