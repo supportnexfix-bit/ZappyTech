@@ -80,7 +80,7 @@ export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onBackToHome }) =>
               5. User Rights (WCAG Compliance)
             </h2>
             <p>
-              You have the right to request a digital export of your registered service history, update contact details, or request standard data purge actions. Contact our privacy officer at <a href="mailto:support@zappytech.com" className="text-brand-emerald hover:underline">support@zappytech.com</a> for compliance requests.
+              You have the right to request a digital export of your registered service history, update contact details, or request standard data purge actions. Contact our privacy officer at <a href="tel:+919876543210" className="text-brand-emerald hover:underline font-mono">+91 98765 43210</a> for compliance requests.
             </p>
           </section>
         </article>

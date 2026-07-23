@@ -1,6 +1,6 @@
 import React from 'react';
 import { Logo } from '../components/ui/Logo';
-import { Mail, Phone, Clock } from 'lucide-react';
+import { Phone, Clock } from 'lucide-react';
 
 interface FooterProps {
   onNavClick?: (sectionId: string) => void;
@@ -94,12 +94,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavClick, onPageChange }) => {
               <Phone className="w-4 h-4 text-brand-emerald flex-shrink-0" />
               <a href="tel:+919876543210" className="hover:text-brand-emerald font-mono">
                 +91 98765 43210
-              </a>
-            </li>
-            <li className="flex items-center gap-3">
-              <Mail className="w-4 h-4 text-brand-emerald flex-shrink-0" />
-              <a href="mailto:support@zappytech.com" className="hover:text-brand-emerald font-mono">
-                support@zappytech.com
               </a>
             </li>
             <li className="flex items-start gap-3">

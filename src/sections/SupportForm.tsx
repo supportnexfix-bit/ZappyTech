@@ -14,7 +14,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 const supportFormSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
   phone: z.string().regex(/^[6-9]\d{9}$/, { message: 'Enter a valid 10-digit Indian phone number.' }),
-  email: z.string().email({ message: 'Enter a valid email address.' }),
   deviceType: z.string().min(1, { message: 'Please select a device class.' }),
   brand: z.string().min(1, { message: 'Specify the device brand/model.' }),
   problemDescription: z.string().min(10, { message: 'Provide a brief description of at least 10 characters.' }),
@@ -119,15 +118,6 @@ export const SupportForm: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Email */}
-                  <Input
-                    label="Email Address"
-                    placeholder="e.g. customer@example.com"
-                    type="email"
-                    error={errors.email?.message}
-                    {...register('email')}
-                  />
-
                   {/* Device Type Select */}
                   <div className="w-full flex flex-col gap-1.5 text-left">
                     <label
@@ -157,9 +147,7 @@ export const SupportForm: React.FC = () => {
                       </span>
                     )}
                   </div>
-                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Brand */}
                   <Input
                     label="Device Brand & Model"
@@ -167,7 +155,9 @@ export const SupportForm: React.FC = () => {
                     error={errors.brand?.message}
                     {...register('brand')}
                   />
+                </div>
 
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Preferred Contact Time Select */}
                   <div className="w-full flex flex-col gap-1.5 text-left">
                     <label

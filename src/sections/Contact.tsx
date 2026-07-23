@@ -1,7 +1,7 @@
 import React from 'react';
 import { SectionHeading } from '../components/ui/SectionHeading';
 import { Card } from '../components/ui/Card';
-import { Phone, Mail, Clock, ShieldAlert } from 'lucide-react';
+import { Phone, Clock, ShieldAlert } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export const Contact: React.FC = () => {
@@ -13,14 +13,6 @@ export const Contact: React.FC = () => {
       href: 'tel:+919876543210',
       status: 'Direct line to lab',
       icon: Phone,
-    },
-    {
-      title: 'Email Communications',
-      value: 'support@zappytech.com',
-      actionLabel: 'Send Inquiry',
-      href: 'mailto:support@zappytech.com',
-      status: 'Response under 2 hours',
-      icon: Mail,
     },
     {
       title: 'Operational Availability',
@@ -42,7 +34,7 @@ export const Contact: React.FC = () => {
           description="Have questions or require immediate support? Reach out to ZAPPYTECH engineering using our verified communication channels."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {contactDetails.map((detail, idx) => {
             const Icon = detail.icon;
             return (
